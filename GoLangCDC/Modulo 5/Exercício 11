@@ -1,0 +1,18 @@
+////// PEDRA PAPEL TESOURA //////
+
+package kata
+
+
+func Rps(P1, P2 string) string {
+  var R, P, S string 
+  R = "rock"
+  P = "paper"
+  S = "scissors"
+  if P1 == P2 {
+    return "Draw!"
+  } 
+  if (P1 == R && P2 == S) || (P1 == P && P2 == R) || (P1 == S && P2 == P) {
+      return "Player 1 won!"
+  }
+  return "Player 2 won!"
+}

@@ -1,0 +1,20 @@
+package kata
+
+import (
+ "fmt"
+ "strings"
+)
+
+//// Lista em Head&Tail e Printar uma String contendo todos Slices ////
+
+func PartList(ListaOriginal []string) string {
+    var FinalPrint string
+  // fmt.Sprintf é usado para formatar uma string e retorná-la
+  // strings.Join usado para concatenar elementos de um slice de strings em uma única string
+  // [i:] ou [:i] serve para fazer Head&Tail, a parte entre aspas sem nada é o caracter usado nos intervalos nesse caso espaço
+  for i:= 1; i < len(ListaOriginal); i++ {
+    Lista:= fmt.Sprintf("(%s, %s)", strings.Join(ListaOriginal[:i], " "), strings.Join(ListaOriginal[i:], " "))
+    FinalPrint += Lista
+  }
+  return FinalPrint
+}

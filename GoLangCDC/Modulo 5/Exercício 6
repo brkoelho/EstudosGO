@@ -1,0 +1,30 @@
+//// Exercício de INT para STRING
+
+package kata
+// Tem que importar esse pacote para usar a função strconv.Itoa
+import (
+  "strconv"
+)
+// A função NumberToString tem entrada n(inteiro) e retorna uma string
+func NumberToString(n int) string {
+  // Aqui eu criei uma variável x para receber o valor da string retornada
+  var x string
+  // Aqui eu usei a função fazendo com que a variável x criada recebesse a string
+  x = strconv.Itoa(n)
+  // E depois então eu retornei o valor de x string
+  return x
+}
+
+////// Outra maneira mais simples declarando a var direto na função
+
+package kata
+
+import (
+  "strconv"
+)
+
+func NumberToString(n int) string {
+  // Eu diria que a leitura aqui é "X recebe um valor tipo string da função que retorna string recebendo n inteiro"
+  x := strconv.Itoa(n)
+  return x
+}

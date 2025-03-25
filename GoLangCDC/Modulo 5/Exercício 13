@@ -1,0 +1,34 @@
+  // Acabou o campeonato de football. Os resultados são salvos em coleções de strings.
+  // Cada partida é representada por uma string no formato "x:y" em que x foi nosso ponto e y o ponto do oponente
+  // Exemplos ["3:1", "2:2", "0:1", ...]
+  // se x>y 3 pontos WIN
+  // se x<y 0 pontos LOSS
+  // se x=y 1 ponto TIE
+  // Precisamos escrever uma função que no de o retorno dessa lista
+  // O retorno é número de pontos que nosso time (x) fez no campeonato
+  // São 10 jogos
+  // 0 <= x <= 4
+  // 0 <= y <= 4
+
+package kata
+
+import (
+  "strings"
+)
+
+func Points(ListaDeJogos []string) int {
+  // Variável para somar os pontos do nosso time
+  var TimePontos int
+  // Em cada elemento da lista de jogos irei chamar cada de Jogo
+  for _, Jogo := range ListaDeJogos {
+    // Em cada elemento Jogo eu vou usar função Split e dividir assim a String e chamar cada uma de Placar
+    Placar := strings.Split(Jogo, ":")
+    if Placar[0] == Placar[1] {
+      TimePontos += 1
+    }
+     if Placar[0] > Placar[1] {
+      TimePontos += 3
+    }
+  }
+  return TimePontos
+}

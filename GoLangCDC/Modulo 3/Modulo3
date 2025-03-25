@@ -1,0 +1,21 @@
+-
+
+	{GOLANG!}
+
+-Lógica de Programação: sequência de passos que fazemos para resolver um problema.
+-Podemos estudar lógica já estudando a linguagem.
+
+* // -> É pra vc poder escrevar um comentário.
+* package main -> parecer ser o início
+* import "fmt" -> faz a importação de um pacote no caso o fmt
+* func main(){} -> vai fazer a função que está entre chaves
+
+Por exemplo
+
+func main() {
+	fmt.Println("Hello world!")
+}
+
+*Println é uma função do pacote fmt que printa e pula linha.
+
+			((Essa função println significa print line))

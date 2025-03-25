@@ -1,0 +1,15 @@
+package kata
+
+// Para usar string.Repeat(valor, reps) é necessário importar esse "strings"
+import (
+ "strings" 
+)
+
+func RepeatStr(repetitions int, value string) string {
+  // Vou usar X para o resultado final
+  // a função strings.Repeat é a que faz essa repetição de string concatenadas... com parâmetros (string, int)
+  // Em que esses parâmetros serão a string usada e o int será quantas vezes que repetirá
+  // Assim o jeito de usar é string.Repeat(valor, reps)
+  X := strings.Repeat(value, repetitions)
+  return X
+}

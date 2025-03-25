@@ -1,0 +1,21 @@
+//// IDADE HUMANO , GATO , CACHORRO ////
+
+package kata
+
+func CalculateYears(H int) [3]int {
+  var G, C int
+  if H == 1 {
+    G = 15    
+    C = 15    
+  } else if H == 2 {
+    G = 24
+    C = 24
+  } else if H > 2 {
+    G = 24 + (H-2) * 4
+    C = 24 + (H-2) * 5
+  }
+  return [3]int{H, G, C}
+}
+
+///////////
+

@@ -1,0 +1,15 @@
+-
+
+	{GOLANG} - 4
+
+PWD - pra saber qual diretório está.
+LS - mostra os arquivos no diretório que estou.
+ÚTIL => CD - CD .. volta pasta & CD com tab você vai pras pastas
+Leia os erros... Para ir criando maturidade.
+
+-Principais tipos:
+
+//bool(true/false) -> BOOLEANO
+//string -> sequência de bytes
+//int -> números inteiros
+//float (float64/float32) -> números decimais

@@ -1,0 +1,66 @@
+package kata
+// Steph mandou pesquisar site... Essa função do go STRconv.AtoI precisa do pacote abaixo
+import (
+  "strconv"
+)
+// Essa função vai retornar INT inteiro recebendo uma STR string
+func StringToNumber(str string) int {
+    // Esse daqui é o padrão que estava no site que pesquisei
+    number, _ := strconv.Atoi(str)
+  return number
+}
+
+
+
+//// OUTRA MANEIRA ////
+
+package kata
+// Essa função do GO strconv.Atoi precisa do pacote abaixo
+import (
+  "strconv"
+)
+// Essa função vai retornar um inteiro recebendo uma str string
+func StringToNumber(s string) int {
+  // Declarei uma variável n inteira -> que será o resultado final
+  var n int
+  // Declarei uma variável erro pois a função sempre retorna um possível erro também
+  var err error
+  // Aqui é  a função
+  n, err = strconv.Atoi(s)
+  if n>0 {
+    return n
+  }
+  // Notação que é usada nessa função
+  if err != nil {
+    return 0
+  }
+  return n
+}
+
+
+/////// PODE SER SUPER SIMPLES O UNDERLINE PODE SER USADO SEMPRE PRA IGNORAR PARÂMETROS (((UTIL)))
+
+package kata
+
+import (
+  "strconv"
+)
+
+func StringToNumber(s string) int {
+  var n int
+  n, _ = strconv.Atoi(s)
+  return n
+}
+
+////// MAIS SIMPLES AINDA
+
+package kata
+
+import (
+  "strconv"
+)
+
+func StringToNumber(s string) int {
+    n, _ := strconv.Atoi(s)
+  return n
+}

@@ -1,0 +1,18 @@
+//// PAR OR IMPAR
+
+package kata
+
+// Tive que voltar a func e usar o nome EvenOrOdd
+func EvenOrOdd(Numero int) string {
+  // Fiz essa variáveis p e i para string Even / Odd
+  var p,i string
+  p = "Even"
+  i = "Odd"
+  // Se o resto da divisão do Número por 2 for == (IGUAL) a 0
+  if Numero % 2 == 0 {
+    // Retornaremos p ou i dependendo do caso
+    return p
+  } else {
+    return i
+  }
+}

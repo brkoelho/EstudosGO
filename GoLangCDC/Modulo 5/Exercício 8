@@ -1,0 +1,28 @@
+package kata
+
+// A Função irá inverter os números de um array/slice que está sendo chamado de "numbers" que são do tipo inteiros
+// A função resultará também em um slice de inteiros
+// Fizemos uma variável para receber o resultado chamada de InvertNumbers
+func Invert(numbers []int) []int {
+  // Variável pra receber o resultado
+  var InvertNumbers []int
+  // Para passar por uma lista geralmente usamos FOR+RANGE
+  // Lê-se: "para todos índices teremos que cada elemento se chama number" eles são da lista numbers
+  for _, number := range numbers {
+    // A nova lista InvertNumbers receberá adições usando append que usa argumento (lista,novo elemento)
+    InvertNumbers = append(InvertNumbers, number * (-1))    
+  }
+  return InvertNumbers
+}
+
+////// OUTRO MODO //////
+package kata
+
+func Invert(ListaOriginal []int) []int {
+  // Nova lista declarada com slice de inteiros
+  var NovaLista []int
+  for _, ElementosOriginais := range ListaOriginal {
+    NovaLista = append(NovaLista, ElementosOriginais * (-1))
+  }
+  return NovaLista
+}

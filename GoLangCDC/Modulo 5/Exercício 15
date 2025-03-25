@@ -1,0 +1,18 @@
+package kata
+
+import (
+  "fmt"
+)
+
+func SortMyString(word string) string {                // Função que recebe uma palavra string e retorna pra nós outra string
+    var oddLetters, evenLetters string                 // Fizemos essas variáveis oddLetter e eveLetters para receber os dados
+    for i := 0 ; i < len(word) ; i++ {                 // Para todos os índices começando do primeiro percorrendo toda palavra
+        if i%2 == 0 {                                  // Se o indice for par
+            evenLetters += string(word[i])             // Adicionaremos a string letra na string resultado
+    }
+    if i%2 != 0 {                                      // Se o indice for impar
+            oddLetters += string(word[i])              // Adicionaremos a string letra na string resultado
+    }
+  }
+return fmt.Sprintf("%s %s", evenLetters, oddLetters)   // Retorno padrão de Sprintf 
+}
